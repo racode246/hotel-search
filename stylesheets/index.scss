@@ -1,5 +1,8 @@
-$backgroud-coler: #DADADA;
+$background-color: #DADADA;
+$text-base-color: #444;
 
 body {
-  background-color: $backgroud-coler;
+  background-color: $background-color;
+  text-align: center;
+  color: $text-base-color;
 }
