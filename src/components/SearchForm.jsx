@@ -14,8 +14,8 @@ class SearchForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    //formがonSubmitされたときにconsole.log関数に渡す引数がthis.state.place
-    //this.props.onSubmit() = console.log()
+    // formがonSubmitされたときにconsole.log関数に渡す引数がthis.state.place
+    // this.props.onSubmit() = console.log()
     this.props.onSubmit(this.state.place);
   }
 

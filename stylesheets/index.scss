@@ -6,3 +6,6 @@ body {
   text-align: center;
   color: $text-base-color;
 }
+
+@import "GeocodeResult";
+@import "map";
