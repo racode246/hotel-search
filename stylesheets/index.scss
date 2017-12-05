@@ -3,9 +3,13 @@ $text-base-color: #444;
 
 body {
   background-color: $background-color;
-  text-align: center;
   color: $text-base-color;
 }
 
+@import "reset";
+@import "App";
+@import "SearchForm";
 @import "GeocodeResult";
-@import "map";
+@import "Map";
+@import "HotelsTable";
+@import "HotelRow";
