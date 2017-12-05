@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class SearchForm extends React.Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class SearchForm extends React.Component {
           value={this.state.place}
           onChange={e => this.handlePlaceChange(e.target.value)}
         />
-        <input type="submit" value="検索" />
+        <input type="submit" value="検索"/>
       </form>
     );
   }
