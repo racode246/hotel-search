@@ -6,7 +6,7 @@ const HotelRow = ({ hotel }) => (
   <tr>
     <td><img src={hotel.thumbUrl} alt={hotel.name} /></td>
     <td className="hotel-name"><a href={hotel.url} target="_blank">{hotel.name}</a></td>
-    <td>{hotel.price}</td>
+    <td>{hotel.price ? `¥${hotel.price}` : '空室なし'}</td>
     <td>{hotel.reviewAverage}</td>
     <td>{hotel.reviewCount}</td>
     <td>{hotel.distance}</td>
@@ -18,7 +18,7 @@ HotelRow.propTypes = {
     name: PropTypes.string,
     url: PropTypes.string,
     thumbUrl: PropTypes.string,
-    price: PropTypes.string,
+    price: PropTypes.number,
     reviewAverage: PropTypes.number,
     reviewCount: PropTypes.number,
     distance: PropTypes.number,
