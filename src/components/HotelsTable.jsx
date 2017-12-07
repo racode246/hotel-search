@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import _ from 'lodash';
 
 import HotelRow from './HotelRow';
 import HotelsClickableTh from './HotelsClickableTh';
 
-const HotelsTable = ({ hotels, sortKey, onSort }) => (
+const HotelsTable = ({ hotels }) => (
   <table>
     <tbody>
       <tr>
@@ -13,14 +15,10 @@ const HotelsTable = ({ hotels, sortKey, onSort }) => (
         <HotelsClickableTh
           label="値段"
           sortKey="price"
-          isSelected={sortKey === 'price'}
-          onSort={key => onSort(key)}
         />
         <HotelsClickableTh
           label="レビュー"
           sortKey="reviewAverage"
-          isSelected={sortKey === 'reviewAverage'}
-          onSort={key => onSort(key)}
         />
         <th className="hotel-review-num-column">レビュー件数</th>
         <th>距離</th>
@@ -32,13 +30,17 @@ const HotelsTable = ({ hotels, sortKey, onSort }) => (
 
 HotelsTable.propTypes = {
   hotels: PropTypes.arrayOf(PropTypes.any),
-  sortKey: PropTypes.string.isRequired,
-  onSort: PropTypes.func.isRequired,
 };
 
-// propTypesでrequiredを設定していないため、初期値が必要
 HotelsTable.defaultProps = {
   hotels: [],
 };
 
-export default HotelsTable;
+const sortedHotels = (hotels, sortKey) => _.sortBy(hotels, h => h[sortKey]);
+
+const mapStateToProps = state => ({
+  hotels: sortedHotels(state.hotels, state.sortKey),
+});
+
+export default connect(mapStateToProps)(HotelsTable);
+

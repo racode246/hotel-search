@@ -14,7 +14,6 @@ GeocodeResult.propTypes = {
   location: PropTypes.objectOf(PropTypes.number).isRequired,
 };
 
-// propTypesでrequiredを設定していないため、初期値が必要
 GeocodeResult.defaultProps = {
   address: '',
 };

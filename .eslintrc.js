@@ -8,6 +8,9 @@ module.exports = {
       "jsx-a11y/anchor-is-valid": [ "error", {
         "components": [ "Link" ],
         "specialLink": [ "to" ],
-      }]
+      }],
+      "no-underscore-dangle": ["error", {
+        "allow": ["__REDUX_DEVTOOLS_EXTENSION__"]
+      }],
     }
 };
