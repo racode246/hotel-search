@@ -1,11 +1,20 @@
 .app {
-  width: 1000px;
-  margin: 0 auto;
+  width: 1200px;
+  margin: 40px auto 0;
+  display: flex;
+}
 
+.left-navi {
+  width: 100px;
+  list-style-type: none;
+  margin-right: 40px;
+  padding: 10px 20px 0 20px;
+  border-right: 1px solid #ccc;
 }
 
 .app-title {
   text-align: center;
+  margin-top: 15px;
 }
 
 .result-area {

@@ -4,6 +4,7 @@ $text-base-color: #444;
 body {
   background-color: $background-color;
   color: $text-base-color;
+  margin: 0;
 }
 
 @import "reset";
