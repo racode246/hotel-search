@@ -1,0 +1,71 @@
+body {
+  background-color: #DADADA;
+  color: #444;
+  margin: 0; }
+
+ul {
+  margin: 0; }
+
+.app {
+  width: 1200px;
+  margin: 40px auto 0;
+  display: flex; }
+
+.left-navi {
+  width: 100px;
+  list-style-type: none;
+  margin-right: 40px;
+  padding: 10px 20px 0 20px;
+  border-right: 1px solid #ccc; }
+
+.app-title {
+  text-align: center;
+  margin-top: 15px; }
+
+.result-area {
+  display: flex; }
+
+.result-right {
+  margin-left: 20px; }
+
+.search-form {
+  text-align: center;
+  margin-bottom: 40px; }
+
+.place-input {
+  font-size: 20px;
+  padding: 4px; }
+
+.submit-button {
+  -webkit-appearance: none;
+  font-size: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px; }
+
+.geocode-result {
+  text-align: left; }
+
+.map {
+  height: 300px;
+  width: 250px; }
+
+td {
+  padding: 5px; }
+
+.hotel-price-column {
+  min-width: 70px; }
+
+.hotel-review-column {
+  width: 90px; }
+
+.hotel-review-num-column {
+  width: 100px; }
+
+.hotel-name {
+  font-size: 15px; }
+
+.hotels-clickable-th {
+  color: blue;
+  cursor: pointer;
+  width: 90px; }
